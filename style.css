@@ -1,0 +1,55 @@
+body{
+    background-color: #111;
+    color:white;
+    text-align:center;
+    font-family:Arial;
+
+    img{
+        border-radius: 50%;
+        margin-top:20px;
+    }
+    a{
+        color:cyan;
+    }
+
+    .container{
+        width:80%;
+        margin:auto;
+    }
+
+    h2{
+        margin-top:50px;
+    }
+
+    .skills{
+        display:flex;
+        justify-content:center;
+        gap:20px;
+    }
+
+    .card{
+        background:#222;
+        padding:20px;
+        border-radius:10px;
+
+    }
+
+    button{
+        backgroud:cyan;
+        border:none;
+        padding:12px 25px;
+        border-radius:5px;
+        cursor:pointer;
+    }
+
+    button:hover{
+        background:white;
+    }
+
+    @media(max-width:600px){
+        .skills{
+            flex-direction:colimn;
+        }
+    }
+
+}
