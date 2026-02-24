@@ -15,10 +15,16 @@
     <img src="https://via.placeholder.com/150">
 
     <h2>Contact</h2>
-    <a href="https://instagram.com/suryavijaysinh._" target="blank">My Instagram</a>
-    <div class="container">
-        ALL CONTENT HERE
-    </div>
+    
+    <form onsubmit="return validateForm()">
+        <input type="text" id="name" placeholder="name"><br><br>
+        <input type="text" id="email" placeholder="abc@gmail.com"><br><br>
+        <button type="submit">Send</button>
+    </form>
+        
+    <p id="error" style="color:red;"></p>
+    <p id="success" style="color:green;"></p>
+
     <h2>My Skills</h2>
     <div class="card">HTML</div>
     <div class="card">CSS</div>
@@ -27,7 +33,29 @@
     <button onclick="showMessage()">Hire Me</button>
     <p id="msg"></p>
 
-    <script>
+<script>
+    function validateForm(){
+
+        let name = document.getElementById("name").value;
+        let email = document.getElementById("email").value;
+            
+            if(name == ""|| email == ""){
+                document.getElementById("error").innerText = "Please fill all fields!";
+                document.getElementById("success").innerText = "";
+                return false;
+            }
+
+            if(!email.includes("@") || !email.includes(".")){
+                document.getElementById("error").innerText = "Enter valid email!";
+                document.getElementById("success").innerText = "";
+                return false;
+            }
+
+            document.getElementById("error").innerText = "";
+            document.getElementById("success").innerText = "From submitted success fully!";
+            return false;            
+            
+        }
         function showMessage(){
             document.getElementById("msg").innerText = "Thanks! I will connect you soon.";
         }
