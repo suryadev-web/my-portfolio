@@ -24,7 +24,14 @@
     <div class="card">CSS</div>
     <div class="card">JavaScript (learning)</div>
 
-    <button>Hire Me</button>
+    <button onclick="showMessage()">Hire Me</button>
+    <p id="msg"></p>
+
+    <script>
+        function showMessage(){
+            document.getElementById("msg").innerText = "Thanks! I will connect you soon.";
+        }
+    </script>
     
 </body>
 </html>
